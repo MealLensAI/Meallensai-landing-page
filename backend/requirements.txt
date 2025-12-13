@@ -1,8 +1,0 @@
-flask-cors
-flask
-supabase
-marshmallow
-dotenv
-requests
-gunicorn
-pytz

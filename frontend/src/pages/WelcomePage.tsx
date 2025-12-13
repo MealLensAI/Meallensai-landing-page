@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/lib/utils';
+import React, { useState, useEffect } from 'react';
 import Logo from '../components/Logo';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -25,45 +23,15 @@ import {
 import { APP_CONFIG, getPlanPrice, getPlanDisplayName, getPlanDurationText, getPlanFeatures } from '../lib/config';
 
 const WelcomePage: React.FC = () => {
-    const navigate = useNavigate();
-    const { user, signOut } = useAuth();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-    // Removed user count feature
-
-    // If a logged-in user hits the landing page, immediately send them to the app
-    useEffect(() => {
-        if (user) {
-            try {
-                window.location.replace('/ai-kitchen');
-            } catch {
-                navigate('/ai-kitchen', { replace: true });
-            }
-        }
-    }, [user, navigate]);
-
-    const handleTryMealLensAI = () => {
-        if (!user) {
-            navigate('/signup');
-        } else {
-            navigate('/ai-kitchen');
-        }
-    };
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     const handleGetStarted = () => {
-        if (!user) {
-            navigate('/signup');
-        } else {
-            navigate('/ai-kitchen');
-        }
-    };
-
-    const handleLogin = () => {
-        navigate('/login');
+        // Update this link to point to your actual app
+        window.open('https://app.meallensai.com/signup', '_blank');
     };
 
     // Features focused on health
@@ -146,34 +114,12 @@ const WelcomePage: React.FC = () => {
                         </nav>
 
                         <div className="flex items-center space-x-2 sm:space-x-4">
-                            {!user ? (
-                                <>
-                                    <Button
-                                        variant="outline"
-                                        onClick={handleLogin}
-                                        className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors hidden sm:inline-flex"
-                                    >
-                                        Sign In
-                                    </Button>
-                                    <Button
-                                        onClick={handleGetStarted}
-                                        className="bg-orange-500 hover:bg-orange-600 text-white transition-colors"
-                                    >
-                                        Get Started
-                                    </Button>
-                                </>
-                            ) : (
-                                <div className="flex items-center space-x-2">
-                                    <span className="hidden sm:block text-gray-700 text-sm lg:text-base truncate max-w-32 lg:max-w-none">{user.email}</span>
-                                    <Button
-                                        variant="outline"
-                                        onClick={signOut}
-                                        className="border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
-                                    >
-                                        Sign Out
-                                    </Button>
-                                </div>
-                            )}
+                            <Button
+                                onClick={handleGetStarted}
+                                className="bg-orange-500 hover:bg-orange-600 text-white transition-colors"
+                            >
+                                Get Started
+                            </Button>
 
                             {/* Mobile Menu Button */}
                             <Button
@@ -194,26 +140,12 @@ const WelcomePage: React.FC = () => {
                                 <a href="#home" className="text-gray-700 hover:text-[#FF6B6B] transition-colors font-medium">Home</a>
                                 <a href="#features" className="text-gray-700 hover:text-[#FF6B6B] transition-colors font-medium">Features</a>
                                 <a href="#pricing" className="text-gray-700 hover:text-[#FF6B6B] transition-colors font-medium">Pricing</a>
-                                {!user ? (
-                                    <Button
-                                        variant="outline"
-                                        onClick={handleLogin}
-                                        className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors mt-2"
-                                    >
-                                        Sign In
-                                    </Button>
-                                ) : (
-                                    <div className="space-y-2">
-                                        <div className="text-gray-700 text-sm truncate">{user.email}</div>
-                                        <Button
-                                            variant="outline"
-                                            onClick={signOut}
-                                            className="border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors w-full"
-                                        >
-                                            Sign Out
-                                        </Button>
-                                    </div>
-                                )}
+                                <Button
+                                    onClick={handleGetStarted}
+                                    className="bg-orange-500 hover:bg-orange-600 text-white transition-colors mt-2"
+                                >
+                                    Get Started
+                                </Button>
                             </nav>
                         </div>
                     )}
@@ -252,7 +184,7 @@ const WelcomePage: React.FC = () => {
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <Button
-                                    onClick={handleTryMealLensAI}
+                                    onClick={handleGetStarted}
                                     size="lg"
                                     className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                                 >
@@ -564,14 +496,6 @@ const WelcomePage: React.FC = () => {
                         >
                             Start Free Trial
                             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                        </Button>
-                        <Button
-                            onClick={handleLogin}
-                            size="lg"
-                            variant="outline"
-                            className="border-white text-white hover:bg-orange-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold"
-                        >
-                            Log In
                         </Button>
                     </div>
                 </div>
