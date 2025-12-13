@@ -3,7 +3,24 @@
   "buildCommand": "npm ci && npm run build",
   "outputDirectory": "dist",
   "framework": null,
+
+  "redirects": [
+    {
+      "source": "/healthassistant",
+      "destination": "https://healthassistant.meallensai.com",
+      "permanent": true
+    },
+    {
+      "source": "/kitchenassistant",
+      "destination": "https://kitchenassistant.meallensai.com",
+      "permanent": true
+    }
+  ],
+
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
