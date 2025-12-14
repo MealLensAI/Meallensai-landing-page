@@ -34,8 +34,9 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg lg:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-12">
-            Tired of cooking the same meals? Managing a health condition? 
-            We use AI to transform your ingredients into personalized recipes and meal plans — instantly. 
+            Tired of cooking the same meals? Managing a chronic health condition? 
+            We use AI to transform your food into medicine that maintains or reverses your chronic health condition, 
+            turn ingredients into personalized recipes and meal plans — instantly. 
             Food tech that solves real problems in your kitchen and your health.
           </p>
 
