@@ -15,8 +15,8 @@ const FeaturesSection = () => {
         </div>
 
         {/* Product 1: Kitchen Assistant */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-16 items-stretch mb-24">
+          <div className="flex flex-col">
             <span className="text-sm font-semibold text-primary uppercase tracking-wider mb-4 block">
               Product One
             </span>
@@ -57,18 +57,18 @@ const FeaturesSection = () => {
             <Button 
               variant="hero" 
               size="lg" 
-              className="group"
+              className="group mt-auto"
               onClick={() => window.open('https://meallensai.com/kitchenassistant', '_blank')}
             >
               Try Kitchen Assistant
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="rounded-2xl overflow-hidden shadow-lg flex items-center">
             <img 
               src="/assets/images/kitchen-assistant-preview.png" 
               alt="Kitchen Assistant - Upload fridge photo to detect ingredients and get recipe suggestions"
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         </div>

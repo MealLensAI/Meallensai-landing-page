@@ -16,7 +16,10 @@ const Navbar = () => {
   }, []);
 
   const handleGetStarted = () => {
-    window.open('https://app.meallensai.com/signup', '_blank');
+    const ctaSection = document.getElementById('cta');
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const navLinks = [
@@ -55,10 +58,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm" className="text-white/60 hover:text-white hover:bg-white/10">
-              Sign In
-            </Button>
+          <div className="hidden lg:flex items-center">
             <Button variant="default" size="sm" onClick={handleGetStarted}>
               Get Started
             </Button>
@@ -92,10 +92,7 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-                <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10">
-                  Sign In
-                </Button>
+              <div className="pt-4 border-t border-white/10">
                 <Button variant="default" className="w-full" onClick={handleGetStarted}>
                   Get Started
                 </Button>
