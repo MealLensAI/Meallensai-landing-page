@@ -27,15 +27,16 @@ const HeroSection = () => {
           
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8 text-white tracking-tight">
-            Better health starts
+            AI-powered food tech
             <br />
-            <span className="text-gradient">with what you eat.</span>
+            <span className="text-gradient">solving health through food.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg lg:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-12">
-            Tired of cooking the same meals? Managing a health condition through diet? 
-            MealLensAI turns your ingredients into personalized recipes — instantly.
+            Tired of cooking the same meals? Managing a health condition? 
+            We use AI to transform your ingredients into personalized recipes and meal plans — instantly. 
+            Food tech that solves real problems in your kitchen and your health.
           </p>
 
           {/* CTA Buttons */}
