@@ -1,17 +1,17 @@
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section id="about" className="py-12 sm:py-16 lg:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left: Vision & Mission */}
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 lg:mb-12">
               Why we built this
             </h2>
             
-            <div className="space-y-10">
+            <div className="space-y-8 sm:space-y-10">
               <div>
-                <h3 className="font-semibold text-lg mb-3">Our vision</h3>
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">Our vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   To become the world's most trusted AI food and health assistant — 
                   helping every person and organization transform health outcomes
@@ -20,7 +20,7 @@ const AboutSection = () => {
               </div>
               
               <div>
-                <h3 className="font-semibold text-lg mb-3">Our mission</h3>
+                <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3">Our mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Make cooking simple. Make healthy eating effortless. Use AI to
                   personalize food choices that improve lives and empower communities
@@ -28,22 +28,22 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              <blockquote className="border-l-4 border-primary pl-6 py-2">
-                <p className="text-xl font-semibold">
+              <blockquote className="border-l-4 border-primary pl-4 sm:pl-6 py-2">
+                <p className="text-lg sm:text-xl font-semibold">
                   "Get better health through food.
                   <br />
                   End cooking burnout."
                 </p>
-                <cite className="text-sm text-muted-foreground mt-2 block">— Our motto</cite>
+                <cite className="text-xs sm:text-sm text-muted-foreground mt-2 block">— Our motto</cite>
               </blockquote>
             </div>
           </div>
 
           {/* Right: Who we serve */}
-          <div className="bg-card rounded-2xl p-8 lg:p-10">
-            <h3 className="text-xl font-bold mb-8">Who we serve</h3>
+          <div className="bg-card rounded-2xl p-6 sm:p-8 lg:p-10">
+            <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8">Who we serve</h3>
             
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
                 <h4 className="font-semibold text-primary mb-4">Individuals</h4>
                 <ul className="space-y-2 text-muted-foreground">

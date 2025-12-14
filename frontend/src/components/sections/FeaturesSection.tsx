@@ -3,11 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="py-24 bg-card">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="features" className="py-12 sm:py-16 lg:py-24 bg-card">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-20">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+        <div className="max-w-3xl mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Two powerful products
             <br />
             <span className="text-muted-foreground font-medium">that solve real problems.</span>
@@ -15,15 +15,15 @@ const FeaturesSection = () => {
         </div>
 
         {/* Product 1: Kitchen Assistant */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-16 sm:mb-20 lg:mb-24">
           <div>
             <span className="text-sm font-semibold text-primary uppercase tracking-wider mb-4 block">
               Product One
             </span>
-            <h3 className="text-2xl lg:text-3xl font-bold mb-6">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">
               Kitchen Assistant
             </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4">
               Solves cooking burnout. You buy ingredients, but end up cooking the same 2 meals over and over.
               The food gets boring. Decision fatigue kicks in. You feel like you have
               "nothing to eat" — even when your kitchen is full.
@@ -74,15 +74,15 @@ const FeaturesSection = () => {
         </div>
 
         {/* Product 2: Health Assistant - Blue for Health */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           <div className="lg:order-2">
             <span className="text-sm font-semibold text-blue uppercase tracking-wider mb-4 block">
               Product Two
             </span>
-            <h3 className="text-2xl lg:text-3xl font-bold mb-6">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6">
               Health Assistant
             </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4">
               Solves health management through food. Most people with diabetes, hypertension, or PCOS don't know which foods help.
               Or they're told "eat yam and beans forever" — with no variety, no joy.
             </p>

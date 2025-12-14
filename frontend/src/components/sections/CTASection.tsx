@@ -7,18 +7,18 @@ const CTASection = () => {
   };
 
   return (
-    <section id="cta" className="py-24 bg-card">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="cta" className="py-12 sm:py-16 lg:py-24 bg-card">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-2">
             Ready to change how you eat?
           </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto px-4 sm:px-0">
             Join thousands who've ended cooking burnout and improved their health
             through smarter eating.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8 px-4 sm:px-0">
             <Button 
               variant="hero" 
               size="xl" 
