@@ -27,9 +27,14 @@ const Footer = () => {
             <p className="text-primary-foreground/70 max-w-sm mb-6">
               Better health through food. End cooking burnout.
             </p>
-            <p className="text-sm text-primary-foreground/50">
-              hello@meallensai.com
-            </p>
+            <div className="space-y-2">
+              <p className="text-sm text-primary-foreground/50">
+                meallensai@gmail.com
+              </p>
+              <p className="text-sm text-primary-foreground/50">
+                +274748703778
+              </p>
+            </div>
           </div>
 
           {/* Links */}

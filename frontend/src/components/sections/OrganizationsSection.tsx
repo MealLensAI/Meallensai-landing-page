@@ -55,12 +55,21 @@ const OrganizationsSection = () => {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="hero" size="lg" className="group" onClick={handleGetStarted}>
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="group" 
+            onClick={() => window.location.href = 'mailto:meallensai@gmail.com'}
+          >
             Partner With Us
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="heroOutline" size="lg">
-            Schedule a Demo
+          <Button 
+            variant="heroOutline" 
+            size="lg"
+            onClick={() => window.open('https://healthassistant.meallensai.com/signup', '_blank')}
+          >
+            Try it out
           </Button>
         </div>
       </div>

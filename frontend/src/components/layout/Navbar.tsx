@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "../Logo";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,6 +52,28 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
+            {/* Products Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-white/60 hover:text-white text-sm font-medium transition-colors flex items-center gap-1 outline-none">
+                Products
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="bg-[#0a0a0f] border-white/10">
+                <DropdownMenuItem
+                  className="text-white/90 hover:text-white hover:bg-white/10 cursor-pointer"
+                  onClick={() => window.open('https://www.meallensai.com/healthassistant', '_blank')}
+                >
+                  Health Assistant
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  className="text-white/90 hover:text-white hover:bg-white/10 cursor-pointer"
+                  onClick={() => window.open('https://meallensai.com/kitchenassistant', '_blank')}
+                >
+                  Kitchen Assistant
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -58,7 +86,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center gap-3">
             <Button variant="default" size="sm" onClick={handleGetStarted}>
               Get Started
             </Button>
@@ -82,6 +110,35 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 py-4 border-t border-white/10">
             <div className="flex flex-col gap-4">
+              {/* Products in Mobile */}
+              <div className="flex flex-col">
+                <span className="text-white/60 font-medium py-2">Products</span>
+                <div className="flex flex-col pl-4 gap-2">
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-white text-sm py-1 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open('https://www.meallensai.com/healthassistant', '_blank');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    Health Assistant
+                  </a>
+                  <a
+                    href="#"
+                    className="text-white/60 hover:text-white text-sm py-1 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open('https://meallensai.com/kitchenassistant', '_blank');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    Kitchen Assistant
+                  </a>
+                </div>
+              </div>
+              
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -92,7 +149,7 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="pt-4 border-t border-white/10">
+              <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
                 <Button variant="default" className="w-full" onClick={handleGetStarted}>
                   Get Started
                 </Button>
