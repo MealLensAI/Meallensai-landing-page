@@ -14,8 +14,7 @@ const CTASection = () => {
             Ready to change how you eat?
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto px-4 sm:px-0">
-            Join thousands who've ended cooking burnout and improved their health
-            through smarter eating.
+         The inflammation, chronic pain, fatigue & energy depletion that comes with chronic conditions is overhwhelming, join thousands managing these symptoms & putting an end to cooking burnout through better eating with the assistance of our AI powered Nutrition Assistant
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8 px-4 sm:px-0">

@@ -10,7 +10,7 @@ const FeaturesSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Two powerful products
             <br />
-            <span className="text-muted-foreground font-medium">that solve real problems.</span>
+            <span className="text-muted-foreground font-medium">solving real problems.</span>
           </h2>
         </div>
 

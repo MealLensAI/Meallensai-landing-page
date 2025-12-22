@@ -30,9 +30,7 @@ const AboutSection = () => {
 
               <blockquote className="border-l-4 border-primary pl-4 sm:pl-6 py-2">
                 <p className="text-lg sm:text-xl font-semibold">
-                  "Get better health through food.
-                  <br />
-                  End cooking burnout."
+                End Cooking Burnout & Get Better Health Through Your Food 
                 </p>
                 <cite className="text-xs sm:text-sm text-muted-foreground mt-2 block">— Our motto</cite>
               </blockquote>
